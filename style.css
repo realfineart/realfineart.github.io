@@ -1,29 +1,64 @@
-* {
-  font-family: Helvetica, Arial, sans-serif;
+html {
+  font: 400 10px/1.6 "area-normal", sans-serif;
+  height: 100%;
 }
-
 body {
-  margin: 30px;
+  height: 100%;
+  font-size: 1.6rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-h2 {
-  font-weight: 400;
+header {
+  border-bottom: 1px solid #000;
 }
-
-header, main {
-  margin-bottom: 50px;
-}
-
 section {
-  max-width: 400px;
-  padding: 0 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+  margin: 2rem;
+  border-style: solid;
+  border-width: 5rem 0.5rem 0.5rem;
+  border-radius: 2rem;
+  max-width: 60rem;
+  padding: 0 3rem;
 }
-
-footer > p {
-  max-width: 700px;
-  padding: 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
+.about {
+  border-color: #922;
+}
+.concepts {
+  border-color: #365;
+}
+.contact {
+  border-color: #356;
+}
+section > div {
+  margin: 3rem 0;
+}
+h1 {
+  margin: 3rem 2rem;
+  display: flex;
+  align-items: flex-end;
+}
+h1 > .title {
+  height: 6rem;
+  font: 100 9rem/1 "cofo-raffine", serif;
+  font-feature-settings: "titl";
+}
+h1 > small {
+  padding-left: 2rem;
+  flex: 1;
+  margin-left: 1rem;
+  font: 100 1.8rem/1.1 "area-normal", sans-serif;
+  letter-spacing: 8%;
+  text-transform: uppercase;
+}
+h2 {
+  font: 400 4rem/5rem "cofo-kabeltouw-solid-0", sans-serif;
+  margin: -5rem 0 0 -1rem;
+  color: rgba(255,255,255,0.667);
+}
+h3 {
+  font: 300 4rem/1 "cofo-raffine", serif;
+  letter-spacing: 5%;
+  margin: 0;
+  font-feature-settings: "ss02", "ss04", "ss05";
 }

@@ -1,0 +1,42 @@
+mixin project(name, desc)
+  .theme
+    h3= name
+    div= desc
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="https://use.typekit.net/nki7nwn.css")
+    link(href="style.css" rel="stylesheet")
+    title Realfine Photography
+  body
+    header
+      h1
+        span.title Realfine
+        small The art photography of #[strong Jake&nbsp;Fine]
+    main
+      section.about
+        h2 Mission
+        div
+          p I am Jake Fine, an artistic photographer.
+          p After years of casual in-the-world and travel photography, I am refreshing my artistic practice (and rebuilding my portfolio) with more planned, posed, and concept-based work.
+          p My goal is to build intentional collaboration with the humans I work with, to see formal and conceptual expression in the final frame. Place is important to me, and I value naturally lit spaces, but I intend to experiment more with staging and preparation.
+          p This is the beginning.
+      section.concepts
+        h2 Topics of Interest
+        +project("peace × peril", "Danger confronts us.")
+        +project("privacy × privilege", "Solitude is a luxury.")
+        +project("portrait × place", "Who are you? Where are you?")
+        +project("persona × performance", "Ritual is motivation.")
+    footer
+      section.contact
+        h2 * Make Art! Be Art!
+        div
+          p Do you want to make photos with me? Let me know. 
+            a(href="https://forms.gle/7MN8PtV7F8Cfe4dL6" target="_blank") [Form]
+          p Let me know where to share images. 
+            a(href="https://forms.gle/N1XFh2eon8sFffL7A" target="_blank") [Form]
+          p I am available to contact on Bluesky as #[a(href="https://bsky.app/profile/realfine.art") @realfine.art].
+          p To email me directly: jake @ [this URL]

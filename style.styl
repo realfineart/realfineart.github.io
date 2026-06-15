@@ -1,0 +1,66 @@
+font-plain = "area-normal", sans-serif
+font-fancy = "cofo-raffine", serif
+font-block = "cofo-kabeltouw-solid-0", sans-serif
+font-stencil = "cofo-kabeltouw-stencil-56", sans-serif
+
+panel(color, border)
+
+html
+  font 400 10px/1.6 font-plain
+  height 100%
+
+body
+  height 100%
+  font-size 1.6rem
+  margin 0
+  display flex
+  flex-direction column
+  justify-content space-between
+
+header
+  border-bottom 1px solid black
+
+section
+  margin 2rem
+  border-style solid
+  border-width 5rem .5rem .5rem
+  border-radius 2rem
+  max-width 60rem
+  padding 0 3rem
+
+.about
+  border-color #922
+.concepts
+  border-color #365
+.contact
+  border-color #356
+
+section > div
+  margin 3rem 0
+
+h1
+  margin 3rem 2rem
+  display flex
+  align-items flex-end
+  > .title
+    height 6rem
+    font 100 9rem/1 font-fancy
+    font-feature-settings "titl"
+  > small
+    padding-left 2rem
+    flex 1
+    margin-left 1rem
+    font 100 1.8rem/1.1 font-plain
+    letter-spacing 8%
+    text-transform uppercase
+
+h2
+  font 400 4rem/5rem font-block
+  margin -5rem 0 0 -1rem
+  color #fffa
+
+h3
+  font 300 4rem/1 font-fancy
+  letter-spacing 5%
+  margin 0
+  font-feature-settings "ss02", "ss04", "ss05"
