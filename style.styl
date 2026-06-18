@@ -1,32 +1,40 @@
-font-plain = "area-normal", sans-serif
-font-fancy = "cofo-raffine", serif
-font-block = "cofo-kabeltouw-solid-0", sans-serif
-font-stencil = "cofo-kabeltouw-stencil-56", sans-serif
+@font-face
+  font-family 'Blackout Midnight'
+  src url('webfonts/blackout_midnight-webfont.woff') format('woff2')
+  font-weight 900
 
-panel(color, border)
+font-plain = "Figtree", sans-serif
+font-fancy = "cofo-raffine", serif
+font-block = 'Blackout Midnight', sans-serif
 
 html
   font 400 10px/1.6 font-plain
+  font-optical-sizing auto
   height 100%
 
 body
-  height 100%
-  font-size 1.6rem
+  min-height 100%
+  font-size 1.7rem
   margin 0
-  display flex
-  flex-direction column
-  justify-content space-between
 
 header
-  border-bottom 1px solid black
+  padding 2rem 3rem
+  border-bottom 0.5px solid black
+  img.logo
+    height 6rem
+
+main
+  padding 0 1rem
 
 section
-  margin 2rem
+  margin 2rem auto
   border-style solid
   border-width 5rem .5rem .5rem
   border-radius 2rem
   max-width 60rem
   padding 0 3rem
+  > *:last-child
+    margin-bottom: 3rem
 
 .about
   border-color #922
@@ -39,28 +47,35 @@ section > div
   margin 3rem 0
 
 h1
-  margin 3rem 2rem
+  margin 0
   display flex
   align-items flex-end
-  > .title
-    height 6rem
-    font 100 9rem/1 font-fancy
-    font-feature-settings "titl"
+  justify-content center
   > small
-    padding-left 2rem
-    flex 1
-    margin-left 1rem
-    font 100 1.8rem/1.1 font-plain
+    margin 0 0 -.3rem 3rem
+    font 300 1.8rem/1.1 font-plain
     letter-spacing 8%
     text-transform uppercase
 
 h2
-  font 400 4rem/5rem font-block
-  margin -5rem 0 0 -1rem
+  font 400 4rem/4.5rem font-block
+  margin -4.5rem 0 3rem 0
+  text-align center
   color #fffa
 
 h3
-  font 300 4rem/1 font-fancy
-  letter-spacing 5%
-  margin 0
+  font 600 2rem/1 font-plain
+  margin 1rem 0
   font-feature-settings "ss02", "ss04", "ss05"
+
+@media (max-width: 450px)
+  body
+    font-size 1.5rem
+  h1 > img.logo
+    height 4rem
+  h1 > small
+    font-size 1.5rem
+    line-height 1.2
+  h2
+    font-size 3rem
+  
