@@ -13,6 +13,9 @@ body {
   font-size: 1.7rem;
   margin: 0;
 }
+p {
+  margin: 2rem 0;
+}
 header {
   padding: 2rem 3rem;
   border-bottom: 0.5px solid #000;
@@ -21,15 +24,25 @@ header img.logo {
   height: 6rem;
 }
 main {
-  padding: 0 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  display: flex;
+  flex-flow: wrap;
 }
 section {
-  margin: 2rem auto;
+  box-sizing: border-box;
+  margin: 1rem;
+  width: calc(100% - 2rem);
   border-style: solid;
-  border-width: 5rem 0.5rem 0.5rem;
+  border-width: 4rem 0.5rem 0.5rem;
   border-radius: 2rem;
-  max-width: 60rem;
   padding: 0 3rem;
+}
+section img {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
 }
 section > *:last-child {
   margin-bottom: 3rem;
@@ -37,14 +50,25 @@ section > *:last-child {
 .about {
   border-color: #922;
 }
-.concepts {
+.topics {
   border-color: #365;
+  width: calc(50% - 2rem);
 }
 .contact {
   border-color: #356;
+  width: calc(50% - 2rem);
 }
-section > div {
-  margin: 3rem 0;
+.work {
+  border-color: #444;
+}
+.work .images {
+  margin-top: -2rem;
+  columns: 2;
+  column-gap: 2rem;
+  column-fill: balance;
+}
+.work .images > *:last-child {
+  margin-bottom: 0;
 }
 h1 {
   margin: 0;
@@ -59,28 +83,35 @@ h1 > small {
   text-transform: uppercase;
 }
 h2 {
-  font: 400 4rem/4.5rem 'Blackout Midnight', sans-serif;
-  margin: -4.5rem 0 3rem 0;
+  font: 400 3rem/3.5rem "Blackout Midnight", sans-serif;
+  margin: -4rem 0 3rem 0;
+  padding: 0.5rem 0 0;
   text-align: center;
   color: rgba(255,255,255,0.667);
+  white-space: nowrap;
 }
 h3 {
-  font: 600 2rem/1 "Figtree", sans-serif;
-  margin: 1rem 0;
-  font-feature-settings: "ss02", "ss04", "ss05";
+  font-weight: 600;
+  margin: 2rem 0 0;
 }
-@media (max-width: 450px) {
+@media (max-width: 800px) {
+  .topics,
+  .contact {
+    width: calc(100% - 2rem);
+  }
+}
+@media (max-width: 600px) {
   body {
     font-size: 1.5rem;
   }
   h1 > img.logo {
-    height: 4rem;
+    height: 5rem;
   }
   h1 > small {
     font-size: 1.5rem;
     line-height: 1.2;
   }
-  h2 {
-    font-size: 3rem;
+  .work .images {
+    columns: 1;
   }
 }
